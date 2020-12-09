@@ -1,4 +1,4 @@
-# free-box
+# webpackToVue3
 
 ## Project setup
 ```
