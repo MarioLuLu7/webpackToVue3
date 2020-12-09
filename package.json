@@ -1,30 +1,62 @@
 {
   "name": "free-box",
   "version": "0.1.0",
+  "main": "./dist/index.js",
+  "types": "./dist/types/index.d.ts",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "serve:vue": "vue-cli-service serve",
+    "build:vue": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "serve": "cross-env process.env.NODE_ENV=development webpack-dev-server --config build/webpack.dev.js",
+    "build": "cross-env process.env.NODE_ENV=production webpack --config build/webpack.prod.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "vue": "^3.0.0"
+    "vue": "3.0.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.9",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.33.0",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-plugin-typescript": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
-    "@vue/compiler-sfc": "^3.0.0",
+    "@vue/compiler-sfc": "3.0.0",
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/eslint-config-typescript": "^5.0.2",
+    "autoprefixer": "^10.1.0",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.4.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.0.1",
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.1.3",
     "eslint-plugin-vue": "^7.0.0-0",
+    "file-loader": "^6.2.0",
+    "fork-ts-checker-webpack-plugin": "^6.0.5",
+    "friendly-errors-webpack-plugin": "^1.7.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^1.3.2",
+    "node-notifier": "^8.0.0",
+    "node-sass": "^5.0.0",
+    "postcss": "^8.2.0",
+    "postcss-loader": "^4.1.0",
     "prettier": "^1.19.1",
-    "typescript": "~3.9.3"
+    "progress-bar-webpack-plugin": "^2.1.0",
+    "sass": "^1.30.0",
+    "sass-loader": "^10.1.0",
+    "style-loader": "^2.0.0",
+    "ts-loader": "^8.0.11",
+    "tsconfig-paths-webpack-plugin": "^3.3.0",
+    "typescript": "^4.1.2",
+    "url-loader": "^4.1.1",
+    "vue-loader": "16.0.0-beta.4",
+    "webpack": "4.37.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.4.1"
   }
 }
